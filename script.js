@@ -122,6 +122,7 @@
       submitBtn.disabled = true;
 
       var formData = new FormData(form);
+      if (!formData.get('email')) formData.delete('email'); // email is optional
       formData.append('access_key', ACCESS_KEY);
       formData.append('subject', 'New inquiry – Vrindavan Dham Housing');
       formData.append('from_name', 'Vrindavan Dham Website');
